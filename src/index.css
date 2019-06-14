@@ -12,37 +12,19 @@ html, body {
     height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-    .container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 50px 1fr 1fr 1fr 1fr 40px 30px;
-    grid-template-areas: 
-        "n n n n n n n n n n"
-        "r r r r r m m m m m"
-        "r r r r r m m m m m"
-        "r r r r r m m m m m"
-        "r r r r r m m m m m"
-        "c c c c c s s s s s"
-        "f f f f f f f f f f";
-    grid-gap: 0px;
-}
-}
-
 .container {
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 50px 1fr 1fr 1fr 1fr 40px 30px;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 40px;
     grid-template-areas: 
-        "n n n n n n n n n n"
-        "r r m m m m m m m m"
-        "r r m m m m m m m m"
-        "r r m m m m m m m m"
-        "r r m m m m m m m m"
-        "c c s s s s s s s s"
-        "f f f f f f f f f f";
+        "n n n n n n n n n n n"
+        "r r m m m m m m m m m"
+        "r r m m m m m m m m m"
+        "r r m m m m m m m m m"
+        "r r m m m m m m m m m"
+        "c c s s s s s s s s s"
+        "f f f f f f f f f f f";
     grid-gap: 0px;
 }
 
@@ -198,5 +180,42 @@ footer {
 }
 
 footer > p {
-    padding-left: 10px;
+    padding: 6px 6px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: 35px 1fr 1fr 1fr 1fr 40px;
+        grid-template-areas: 
+            "n n n n n n n n n n n"
+            "r r r r r m m m m m m"
+            "r r r r r m m m m m m"
+            "r r r r r m m m m m m"
+            "r r r r r m m m m m m"
+            "c c c c c s s s s s s"
+            "f f f f f f f f f f f";
+    }
+    .room-btn {
+        text-decoration: none;
+        color: rgb(224, 24, 64);
+        font-size: 16px;
+    }
+    .room-btn-active {
+        text-decoration: none;
+        color: rgb(247, 127, 83);
+        font-size: 16px;
+    }
+    .message-username {
+        font-size: 9px;
+    }
+
+    .message-text {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .nav-bar > h1 {
+        font-size: 20px;
+    }
 }
