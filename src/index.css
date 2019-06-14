@@ -1,13 +1,184 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html, body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 40px 30px;
+    grid-template-areas: 
+        "n n n n n n n n n n"
+        "r r m m m m m m m m"
+        "r r m m m m m m m m"
+        "r r m m m m m m m m"
+        "r r m m m m m m m m"
+        "c c s s s s s s s s"
+        "f f f f f f f f f f";
+    grid-gap: 0px;
+}
+
+.message-list {
+    grid-area: m;
+    height: 100%;
+    background-color: lemonchiffon;
+    overflow: scroll;
+}
+
+.join-room {
+    grid-area: m;
+    height: 100%;
+    background-color: lemonchiffon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    color: rgb(22, 202, 52)
+}
+
+.message {
+    background-color: teal;
+    margin: 10px 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.message-username {
+    font-size: 12px;
+}
+
+.message-text {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.send-message-form {
+    grid-area: s;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.form {
+    width: 100%;
+}
+
+.input-field {
+    height: 30px;
+    width: 100%;
+}
+
+.new-room-form {
+    grid-area: c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darksalmon;
+}
+
+.room-form {
+    padding: 0 8px;
+    width: 100%;
+}
+
+.room-input {
+    height: 30px;
+    width: 80%;
+}
+
+.new-room-btn {
+    background-color: rgb(119, 174, 238);
+    color: indigo;
+    height: 30px;
+    width: 20%;
+    border: none;
+}
+
+.room-list {
+    grid-area: r;
+    height: 100%;
+    background-color: #E9EDF6;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.room-list ul {
+    list-style-type: none;
+}
+
+.room-list ul li {
+    padding: 10px 0;
+}
+
+.room-btn {
+    text-decoration: none;
+    color: crimson;
+    font-size: 23px;
+}
+
+.room-btn-active {
+    text-decoration: none;
+    color: coral;
+    font-size: 23px;
+}
+
+.room-btn:hover {
+    color: blueviolet;
+}
+
+.room-list h3 {
+    color: gray;
+    padding: 15px 0;
+}
+
+.help-text {
+    width: 100px;
+    padding: 5px 0;
+    font-size: 20px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.nav-bar {
+    height: 100%;
+    grid-area: n;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 88, 221);
+    color: white;
+}
+
+.nav-bar > h1 {
+    color: rgb(222, 233, 163);
+}
+
+footer {
+    height: 100%;
+    grid-area: f;
+    color: rgb(192, 96, 7);
+    background-color: rgb(147, 229, 195);
+    display: flex;
+    align-items: center;
+}
+
+footer > p {
+    padding-left: 10px;
 }
