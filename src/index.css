@@ -218,4 +218,8 @@ footer > p {
     .nav-bar > h1 {
         font-size: 20px;
     }
+
+    footer > p {
+        font-size: 8px;
+    }
 }
