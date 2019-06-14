@@ -132,7 +132,7 @@ html, body {
 
 .room-btn-active {
     text-decoration: none;
-    color: coral;
+    color: rgb(247, 127, 83);
     font-size: 23px;
 }
 
