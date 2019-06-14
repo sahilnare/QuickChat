@@ -5,6 +5,7 @@
   "dependencies": {
     "@pusher/chatkit-client": "^1.5.0",
     "@pusher/chatkit-server": "^1.1.0",
+    "netlify-cli": "^2.11.22",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"

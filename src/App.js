@@ -61,6 +61,7 @@ class App extends React.Component {
     this.setState({messages: []})
     this.currentUser.subscribeToRoomMultipart({
       roomId: roomId,
+      messageLimit: 50,
       hooks: {
         onMessage: message => {
           this.setState({

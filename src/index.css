@@ -12,6 +12,24 @@ html, body {
     height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 40px 30px;
+    grid-template-areas: 
+        "n n n n n n n n n n"
+        "r r r r r m m m m m"
+        "r r r r r m m m m m"
+        "r r r r r m m m m m"
+        "r r r r r m m m m m"
+        "c c c c c s s s s s"
+        "f f f f f f f f f f";
+    grid-gap: 0px;
+}
+}
+
 .container {
     display: grid;
     height: 100%;
