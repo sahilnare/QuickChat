@@ -8,17 +8,18 @@ import RoomList from "./components/RoomList"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
-
 class App extends React.Component {
 
   constructor() {
     super()
+    
     this.state = {
       roomId: null,
       messages: [],
       joinableRooms: [],
       joinedRooms: []
     }
+    
     this.sendMessage = this.sendMessage.bind(this)
     this.subscribeToRoom = this.subscribeToRoom.bind(this)
     this.getRooms = this.getRooms.bind(this)
@@ -113,3 +114,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+
