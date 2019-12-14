@@ -3,7 +3,6 @@ import React from "react"
 class NewRoomForm extends React.Component {
 
     constructor() {
-        
         super()
         this.state = {
             roomName: ""
@@ -21,7 +20,6 @@ class NewRoomForm extends React.Component {
     }
 
     handleSubmit(event) {
-        
         event.preventDefault()
         this.props.createNewRoom(this.state.roomName)
         this.setState({
@@ -30,7 +28,6 @@ class NewRoomForm extends React.Component {
     }
 
     render() {
-        
         return (
             <div className="new-room-form">
                 <form class="room-form" onSubmit={this.handleSubmit}>
