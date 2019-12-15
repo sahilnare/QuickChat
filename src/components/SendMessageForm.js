@@ -1,6 +1,7 @@
 import React from "react"
 
 class SendMessageForm extends React.Component {
+    
     constructor() {
         super()
         this.state = {
@@ -11,6 +12,7 @@ class SendMessageForm extends React.Component {
     }
 
     handleChange(event) {
+        
         const {name, value} = event.target
         this.setState({
             [name]: value
@@ -18,6 +20,7 @@ class SendMessageForm extends React.Component {
     }
 
     handleSubmit(event) {
+        
         event.preventDefault()
         this.props.sendMessage(this.state.text)
         this.setState({
@@ -26,6 +29,7 @@ class SendMessageForm extends React.Component {
     }
 
     render() {
+        
         return (
             <div className="send-message-form">
                 <form className="form" onSubmit={this.handleSubmit}>
