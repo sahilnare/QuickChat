@@ -3,7 +3,6 @@ import ReactDOM from "react-dom"
 import Message from "./Message"
 
 class MessageList extends React.Component {
-
     componentDidUpdate() {
         const node = ReactDOM.findDOMNode(this)
         node.scrollTop = node.scrollHeight
@@ -33,3 +32,4 @@ class MessageList extends React.Component {
 }
 
 export default MessageList
+
